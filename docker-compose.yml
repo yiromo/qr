@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  parse-backend:
+    build: .
+    container_name: parse_back
+    restart: always
+    ports:
+      - 8100:8000
+    networks:
+      - parse-net
+    volumes:
+      - .:/src
+
+networks:
+  parse-net:
+    driver: bridge

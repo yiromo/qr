@@ -1,0 +1,8 @@
+fastapi==0.101.1
+uvicorn==0.28.1
+requests
+python-dotenv
+qrcode[pil]
+pyzbar
+opencv-python-headless
+python-multipart
