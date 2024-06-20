@@ -1,9 +1,10 @@
 from fastapi import FastAPI
-from router.router import router
-
+from router.qrparse_route import router as qrdecode
+from router.qrgen_route import router as qrgen
 app = FastAPI()
 
-app.include_router(router)
+app.include_router(qrdecode)
+app.include_router(qrgen)
 
 if __name__ == "__main__":
     import uvicorn
