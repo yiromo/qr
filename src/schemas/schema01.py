@@ -4,26 +4,11 @@ from fastapi import UploadFile, HTTPException
 from PIL import Image
 import io
 import json
-import qrcode
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def generate_qr_code(data):
-    qr = qrcode.QRCode(
-        version=1,
-        error_correction=qrcode.constants.ERROR_CORRECT_L,
-        box_size=10,
-        border=4,
-    )
-    qr.add_data(data)
-    qr.make(fit=True)
-
-    img = qr.make_image(fill_color="black", back_color="white")
-    return img
-
-async def generate_qr_img(json_data: dict):
-    pass
 
 def decode_qr_code(image):
     try:

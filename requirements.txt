@@ -6,3 +6,4 @@ qrcode[pil]
 pyzbar
 opencv-python-headless
 python-multipart
+segno
