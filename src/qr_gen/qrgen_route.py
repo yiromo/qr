@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, File, UploadFile
 from fastapi.responses import FileResponse
 from fastapi.responses import JSONResponse
-from schemas.schema02 import generate_qr_img, generate_qr_code
+from qr_gen.schema02 import generate_qr_img, generate_qr_code
 
 router = APIRouter(
     prefix="/QRgen",

@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, File, UploadFile
 from fastapi.responses import JSONResponse
-from schemas.schema01 import parse_qr_code
+from qr_decode.schema01 import parse_qr_code
 
 router = APIRouter(
     prefix="/QR_Decode",
